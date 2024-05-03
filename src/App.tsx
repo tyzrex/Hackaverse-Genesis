@@ -56,7 +56,7 @@ function App() {
           <h3 className="text-[18px] uppercase font-main font-bold text-[#B333D9]">
             Follow us on
           </h3>
-          <div className="flex gap-2 flex-wrap">
+          <div className="flex gap-2 flex-wrap mt-2">
             {socials.map((social, index) => (
               <a
                 key={index}
