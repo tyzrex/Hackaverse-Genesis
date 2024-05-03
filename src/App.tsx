@@ -1,35 +1,80 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import ITClubLogo from "./assets/it_club_logo 1.png";
+import InstagramIcon from "./assets/li_instagram.png";
+import FacebookIcon from "./assets/li_facebook.png";
+import TwitterIcon from "./assets/li_twitter.png";
+import YouTubeIcon from "./assets/li_youtube.png";
+import CountdownTimer from "./_components/counter";
+
+const socials = [
+  {
+    name: "Instagram",
+    link: "https://instagram.com/itclubkln",
+    icon: InstagramIcon,
+  },
+  {
+    name: "Facebook",
+    link: "https://facebook.com/itclubkln",
+    icon: FacebookIcon,
+  },
+  {
+    name: "Twitter",
+    link: "https://twitter.com/itclubkln",
+    icon: TwitterIcon,
+  },
+  {
+    name: "YouTube",
+    link: "https://youtube.com/itclubkln",
+    icon: YouTubeIcon,
+  },
+  {
+    name: "LinkedIn",
+    link: "https://linkedin.com/itclubkln",
+    icon: YouTubeIcon,
+  },
+];
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const event = {
+    date: new Date("2027-01-27T23:59:59"),
+  };
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div>
+      <div className="flex flex-col items-center min-h-screen">
+        <div className="overlay"></div>
+        <div className="background"></div>
+        <img src={ITClubLogo} alt="IT Club Logo" className="w-32 mt-10" />
+
+        <h1 className="text-[18px] sm:text-[24px] md:text-[32px] lg:text-[64px] font-bold mt-5 font-main from-[#C915E5] to-[#7F0EA0] bg-gradient-to-r bg-clip-text text-transparent text-center">
+          SOMETHING EXCITING IS ON THE WAY
+        </h1>
+        <h2 className="text:-[12px] sm:text-[18px] md:text-[24px] lg:text-[36px] mt-10 uppercase font-secondary font-bold text-[#B333D9]">
+          Coming soon in
+        </h2>
+
+        <CountdownTimer event={event} />
+        <div className="absolute bottom-0 left-0 flex flex-col items-center justify-center p-10">
+          <h3 className="text-[18px] uppercase font-main font-bold text-[#B333D9]">
+            Follow us on
+          </h3>
+          <div className="flex gap-2 flex-wrap">
+            {socials.map((social, index) => (
+              <a
+                key={index}
+                href={social.link}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-block w-10 h-10 mr-2"
+              >
+                <div className="border border-purple-900 rounded-full p-[10px]">
+                  <img src={social.icon} alt={social.name} />
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
