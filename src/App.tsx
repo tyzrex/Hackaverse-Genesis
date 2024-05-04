@@ -8,27 +8,27 @@ import CountdownTimer from "./_components/counter";
 const socials = [
   {
     name: "Instagram",
-    link: "https://instagram.com/itclubkln",
+    link: "https://www.instagram.com/primeitclub/",
     icon: InstagramIcon,
   },
   {
     name: "Facebook",
-    link: "https://facebook.com/itclubkln",
+    link: "https://www.facebook.com/primeitclub",
     icon: FacebookIcon,
   },
   {
     name: "Twitter",
-    link: "https://twitter.com/itclubkln",
+    link: "https://twitter.com/primeitclub",
     icon: TwitterIcon,
   },
   {
     name: "YouTube",
-    link: "https://youtube.com/itclubkln",
+    link: "https://www.youtube.com/@primeitclub",
     icon: YouTubeIcon,
   },
   {
     name: "LinkedIn",
-    link: "https://linkedin.com/itclubkln",
+    link: "https://www.linkedin.com/company/prime-it-club/",
     icon: YouTubeIcon,
   },
 ];
