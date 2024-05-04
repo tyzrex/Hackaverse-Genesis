@@ -44,10 +44,10 @@ function App() {
         <div className="background"></div>
         <img src={ITClubLogo} alt="IT Club Logo" className="w-32 mt-10" />
 
-        <h1 className="text-[18px] sm:text-[24px] md:text-[32px] lg:text-[64px] font-bold mt-5 font-main from-[#C915E5] to-[#7F0EA0] bg-gradient-to-r bg-clip-text text-transparent text-center">
+        <h1 className="text-[32px] lg:text-[64px] font-bold mt-5 font-main from-[#C915E5] to-[#7F0EA0] bg-gradient-to-r bg-clip-text text-transparent text-center">
           SOMETHING EXCITING IS ON THE WAY
         </h1>
-        <h2 className="text:-[12px] sm:text-[18px] md:text-[24px] lg:text-[36px] mt-10 uppercase font-secondary font-bold text-[#B333D9]">
+        <h2 className="text-[24px] lg:text-[36px] mt-10 uppercase font-secondary font-bold text-[#B333D9]">
           Coming soon in
         </h2>
 

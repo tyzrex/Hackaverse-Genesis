@@ -5,7 +5,6 @@ export default {
     extend: {
       fontFamily: {
         main: ["Orbitron", "sans-serif"],
-        secondary: ["Monsterrat", "sans-serif"],
       },
     },
   },

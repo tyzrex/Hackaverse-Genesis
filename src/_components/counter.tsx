@@ -43,21 +43,21 @@ const CountdownTimer: React.FC<{ event: Event }> = ({ event }) => {
 
   return (
     <div className="text-white font-secondary p-4 rounded-md">
-      <div className="flex justify-center items-center gap-16 flex-wrap">
+      <div className="flex justify-center items-center gap-16 md:gap-32 flex-wrap">
         <div className="flex flex-col items-center">
-          <span className="text-[24px] sm:text-[32px] md:text-[48px] lg:text-[72px] font-bold">
+          <span className="text-[32px] md:text-[48px] lg:text-[72px] font-secondary font-bold">
             {formatNumber(countdown.days)}
           </span>
           <span className="text-[#B333D9] text-[18px] font-medium">Days</span>
         </div>
         <div className="flex flex-col items-center ">
-          <span className="text-[24px] sm:text-[32px] md:text-[48px] lg:text-[72px] font-bold">
+          <span className="text-[32px] md:text-[48px] lg:text-[72px] font-secondary font-bold">
             {formatNumber(countdown.hours)}
           </span>
           <span className="text-[#B333D9] text-[18px] font-medium">Hours</span>
         </div>
         <div className="flex flex-col items-center ">
-          <span className="text-[24px] sm:text-[32px] md:text-[48px] lg:text-[72px] font-bold">
+          <span className="text-[32px] md:text-[48px] lg:text-[72px] font-secondary font-bold">
             {formatNumber(countdown.minutes)}
           </span>
           <span className="text-[#B333D9] text-[18px] font-medium">
@@ -65,7 +65,7 @@ const CountdownTimer: React.FC<{ event: Event }> = ({ event }) => {
           </span>
         </div>
         <div className="flex flex-col items-center">
-          <span className="text-[24px] sm:text-[32px] md:text-[48px] lg:text-[72px] font-bold">
+          <span className="text-[32px] md:text-[48px] lg:text-[72px] font-secondary font-bold">
             {formatNumber(countdown.seconds)}
           </span>
           <span className="text-[#B333D9] text-[18px] font-medium">
