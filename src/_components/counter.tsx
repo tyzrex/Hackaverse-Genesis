@@ -42,7 +42,7 @@ const CountdownTimer: React.FC<{ event: Event }> = ({ event }) => {
   }, [event]);
 
   return (
-    <div className="text-white font-secondary p-4 rounded-md">
+    <div className="text-white font-secondary p-4 rounded-md mt-5 md:mt-0">
       <div className="flex justify-center items-center gap-16 md:gap-32 flex-wrap">
         <div className="flex flex-col items-center">
           <span className="text-[32px] md:text-[48px] lg:text-[72px] font-secondary font-bold">
