@@ -12,7 +12,7 @@ body {
 }
 
 .background {
-  background: url("./assets/background.svg");
+  background: url("./assets/background.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -28,7 +28,6 @@ body {
 .overlay {
   background: url("./assets/robot-bg.webp");
   background-size: cover;
-  background-position: top;
   background-repeat: no-repeat;
   position: absolute;
   z-index: -10;
@@ -36,4 +35,19 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+
+  @media screen and (max-width: 1000px) {
+    background: url("./assets/hand.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 30%;
+  }
+
+  @media screen and (max-width: 640px) {
+    top: 50%;
+  }
+
+  @media screen and (min-width: 1000px) {
+    background-position: top;
+  }
 }
