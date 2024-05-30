@@ -11,18 +11,22 @@ interface ThemeCardProps {
   id: number;
   name: string;
   goal: string;
+  image: string;
 }
 
-export default function ThemeCard({ id, name, goal }: ThemeCardProps) {
+export default function ThemeCard({ id, name, goal, image }: ThemeCardProps) {
   return (
     <>
-      <Card id={id.toString()}>
+      <Card
+        id={id.toString()}
+        className="bg-black border border-gray-600 text-white w-full rounded-none"
+      >
         <CardHeader>
           <CardTitle>SDG {goal}</CardTitle>
           <CardDescription>{name}</CardDescription>
         </CardHeader>
         <CardContent>
-          <p>Card Content</p>
+          <img src={image} alt="Theme" className="aspect-[2/1.5]" />
         </CardContent>
       </Card>
     </>

@@ -80,7 +80,7 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background: radial-gradient(circle at top, #2e053a, #000000 50%);
+  background: radial-gradient(circle at top, #2e053a, #000000 25%);
   /* fallback for older browsers */
   background-color: #000000;
 }
@@ -88,11 +88,19 @@ body {
 @media (max-width: 1024px) {
   /* Your CSS code for max width goes here */
   body {
-    background: radial-gradient(circle at top, #2e053abf, #000000 30%);
+    background: radial-gradient(circle at top, #2e053abf, #000000 24%);
     /* fallback for older browsers */
     background-color: #000000;
 }
+}
 
+@media (max-width: 640px) {
+  /* Your CSS code for max width goes here */
+  body {
+    background: radial-gradient(circle at top, #2e053abf, #000000 12%);
+    /* fallback for older browsers */
+    background-color: #000000;
+}
 }
 
 .gradient{
