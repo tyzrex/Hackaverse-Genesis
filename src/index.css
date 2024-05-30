@@ -90,3 +90,12 @@ body {
   /* fallback for older browsers */
   background-color: #000000;
 }
+
+.text-bottom {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #9831b8;
+    -webkit-text-fill-color:#000000;
+    stroke-width: 1px;
+    stroke: #9831b8;
+    fill: #000000;
+  }
