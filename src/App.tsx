@@ -1,79 +1,43 @@
-import ITClubLogo from "./assets/it_club_logo 1.png";
-import InstagramIcon from "./assets/li_instagram.png";
-import FacebookIcon from "./assets/li_facebook.png";
-import TwitterIcon from "./assets/li_twitter.png";
-import YouTubeIcon from "./assets/li_youtube.png";
-import CountdownTimer from "./_components/counter";
+import Navbar from "./components/global/navbar";
+import About from "./components/sections/about.section";
+import HeroSection from "./components/sections/hero-section";
+import { HighlightsSection } from "./components/sections/highlights-section";
+import ThemeSection from "./components/sections/theme-section";
+import MaxWidthWrapper from "./components/wrapper/maxwidth-wrapper";
 
-const socials = [
-  {
-    name: "Instagram",
-    link: "https://www.instagram.com/primeitclub/",
-    icon: InstagramIcon,
-  },
-  {
-    name: "Facebook",
-    link: "https://www.facebook.com/primeitclub",
-    icon: FacebookIcon,
-  },
-  {
-    name: "Twitter",
-    link: "https://twitter.com/primeitclub",
-    icon: TwitterIcon,
-  },
-  {
-    name: "YouTube",
-    link: "https://www.youtube.com/@primeitclub",
-    icon: YouTubeIcon,
-  },
-  {
-    name: "LinkedIn",
-    link: "https://www.linkedin.com/company/prime-it-club/",
-    icon: YouTubeIcon,
-  },
-];
+function generateRandomColor() {
+  const choices = [
+    "bg-red-400",
+    "bg-green-400",
+    "bg-blue-400",
+    "bg-yellow-400",
+    "bg-indigo-400",
+    "bg-purple-400",
+    "bg-pink-400",
+  ];
+  return choices[Math.floor(Math.random() * choices.length)];
+}
 
 function App() {
-  const event = {
-    date: new Date("2027-01-27T23:59:59"),
-  };
   return (
-    <div>
-      <div className="flex flex-col items-center min-h-screen container mx-auto px-5">
-        <div className="overlay"></div>
-        <div className="background"></div>
-        <img src={ITClubLogo} alt="IT Club Logo" className="w-32 mt-10" />
-
-        <h1 className="text-[24px] md:text-[32px] lg:text-[48px] xl:text-[54px] 2xl:text-[64px] font-bold mt-5 font-main text-[#F2EBF3] bg-gradient-to-r bg-clip-text text-center">
-          SOMETHING EXCITING IS ON THE WAY
-        </h1>
-        <h2 className="text-[18px] md:text-[24px] lg:text-[36px] mt-10 uppercase font-secondary font-bold text-[#B333D9]">
-          Coming soon in
-        </h2>
-
-        <CountdownTimer event={event} />
-        <div className="absolute bottom-0 lg:left-0 flex flex-col items-center justify-center p-10">
-          <h3 className="text-[14px] md:text-[18px] uppercase font-main font-bold text-[#B333D9]">
-            Follow us on
-          </h3>
-          <div className="flex gap-2 flex-wrap mt-2">
-            {socials.map((social, index) => (
-              <a
-                key={index}
-                href={social.link}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-block w-9 h-9 md:w-10 md:h-10 mr-2"
-              >
-                <div className="border border-purple-900 rounded-full p-[10px]">
-                  <img src={social.icon} alt={social.name} />
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
+    <>
+      <MaxWidthWrapper>
+        <Navbar />
+      </MaxWidthWrapper>
+      <HeroSection />
+      <About />
+      <MaxWidthWrapper>
+        <ThemeSection />
+      </MaxWidthWrapper>
+      <HighlightsSection
+        products={Array.from({ length: 4 }, (_, i) => ({
+          title: "test",
+          background: generateRandomColor(),
+          description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        }))}
+      />
+    </>
   );
 }
 
