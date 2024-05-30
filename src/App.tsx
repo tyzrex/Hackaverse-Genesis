@@ -10,9 +10,7 @@ function App() {
         <Navbar />
       </MaxWidthWrapper>
       <HeroSection />
-      <MaxWidthWrapper>
-        <About />
-      </MaxWidthWrapper>
+      <About />
     </>
   );
 }
