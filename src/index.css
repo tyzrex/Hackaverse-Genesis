@@ -85,6 +85,16 @@ body {
   background-color: #000000;
 }
 
+@media (max-width: 1024px) {
+  /* Your CSS code for max width goes here */
+  body {
+    background: radial-gradient(circle at top, #2e053abf, #000000 30%);
+    /* fallback for older browsers */
+    background-color: #000000;
+}
+
+}
+
 .gradient{
   background: radial-gradient(circle at top, #2e053a, #000000 35%);
   /* fallback for older browsers */
