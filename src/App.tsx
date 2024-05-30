@@ -1,4 +1,5 @@
 import Navbar from "./components/global/navbar";
+import About from "./components/sections/about.section";
 import HeroSection from "./components/sections/hero-section";
 import MaxWidthWrapper from "./components/wrapper/maxwidth-wrapper";
 
@@ -9,7 +10,9 @@ function App() {
         <Navbar />
       </MaxWidthWrapper>
       <HeroSection />
-      <MaxWidthWrapper></MaxWidthWrapper>
+      <MaxWidthWrapper>
+        <About />
+      </MaxWidthWrapper>
     </>
   );
 }
