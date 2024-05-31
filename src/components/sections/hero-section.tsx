@@ -14,7 +14,7 @@ export default function HeroSection() {
           <img
             src={Hand}
             alt="Hand"
-            className="2xl:max-w-[1568px] max-h-[767px] mt-[-6rem] sm:mt-[-8rem] lg:mt-[-18rem] mr-[-3rem] sm:mr-[-6rem] float-right"
+            className="2xl:max-w-[1568px] max-h-[767px] mt-[-6rem] sm:mt-[-8rem] lg:mt-[-18rem] mr-[-3rem] sm:mr-[-6rem] float-right 2xl:mr-[-25rem]"
           />
         </div>
       </SectionWrapper>

@@ -6,7 +6,7 @@ import SectionWrapper from "../wrapper/section-wrapper";
 
 export default function About() {
   return (
-    <SectionWrapper className="relative w-full bg-black flex flex-col items-center justify-center overflow-hidden">
+    <SectionWrapper className="md:py-36 relative w-full bg-black flex flex-col items-center justify-center overflow-hidden">
       <div className="w-full absolute inset-0 h-screen">
         <SparklesCore
           id="tsparticlesfullpage"

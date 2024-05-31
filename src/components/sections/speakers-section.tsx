@@ -10,7 +10,7 @@ export default function MentorsSection() {
   return (
     <>
       <SectionWrapper className="container">
-        <SectionHeader headingText="OUR SPEAKERS" />
+        <SectionHeader headingText="OUR SPEAKERS" showBottomText />
         <SectionInfo
           className="mt-4 mb-10"
           subheader="The themes of our Hackathon revolves around Sustainable Development Goals (SDGs), specifically focusing on four key goals:"

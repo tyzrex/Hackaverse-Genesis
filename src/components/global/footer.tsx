@@ -56,7 +56,7 @@ export default function Footer() {
               <h3 className="text-[14px] md:text-[18px] lg:text-[24px] uppercase font-[Orbitron] font-bold text-[#B333D9]">
                 Follow us on
               </h3>
-              <div className="flex gap-4 flex-wrap mt-2">
+              <div className="flex gap-4 flex-wrap mt-2 justify-center">
                 {socials.map((social, index) => (
                   <a
                     key={index}
