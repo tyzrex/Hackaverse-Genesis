@@ -88,7 +88,7 @@ body {
 @media (max-width: 1024px) {
   /* Your CSS code for max width goes here */
   body {
-    background: radial-gradient(circle at top, #2e053abf, #000000 24%);
+    background: radial-gradient(circle at top, #2e053abf, #000000 5%);
     /* fallback for older browsers */
     background-color: #000000;
 }
@@ -97,7 +97,7 @@ body {
 @media (max-width: 640px) {
   /* Your CSS code for max width goes here */
   body {
-    background: radial-gradient(circle at top, #2e053abf, #000000 12%);
+    background: radial-gradient(circle at top, #2e053abf, #000000 3%);
     /* fallback for older browsers */
     background-color: #000000;
 }
