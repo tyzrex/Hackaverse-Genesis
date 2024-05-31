@@ -1,6 +1,7 @@
 import HeroLogo from "@/assets/header.png";
 import Globe from "../elements/globe";
 import GlobeSection from "../sections/globe-section";
+import CTAButton from "../reusables/cta-button";
 
 export default function HeroHeader() {
   return (
@@ -23,6 +24,7 @@ export default function HeroHeader() {
         >
           "IGNITE IDEAS, IGNITE CHANGE"
         </h2>
+        <CTAButton className="py-8 px-6 hover:bg-white hover:text-black transition-colors duration-300 bg-[rgba(94,94,94,0.6)] text-[#8B8787] font-[Orbitron] mt-5 w-fit text-2xl" />
         <GlobeSection />
       </div>
     </>

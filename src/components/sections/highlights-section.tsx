@@ -64,7 +64,7 @@ export const HighlightsSection = ({
       </MaxWidthWrapper>
       <div
         ref={ref}
-        className="h-[220vh] sm:h-[210vh] md:h-[220vh] xl:h-[200vh] py-20 md:py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+        className="h-[210vh] sm:h-[210vh] md:h-[220vh] xl:h-[200vh] py-20 md:py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
       >
         <motion.div
           style={{

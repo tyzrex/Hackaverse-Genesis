@@ -5,7 +5,7 @@ export default function SectionHeader({
 }) {
   return (
     <h2
-      className="text-[#F3E6F5] relative z-20 font-[Orbitron] text-3xl"
+      className="text-[#F3E6F5] relative z-20 font-[Orbitron] text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold"
       style={{
         textShadow: "0px 0px 50px #51155A, 0px 0px 25px #82219E",
         WebkitTextStrokeWidth: 2,
