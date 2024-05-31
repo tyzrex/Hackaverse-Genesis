@@ -103,6 +103,13 @@ body {
 }
 }
 
+@media (min-width: 1920px){
+  body{
+    max-width: 1920px;
+    margin: auto;
+  }
+}
+
 .gradient{
   background: radial-gradient(circle at top, #2e053a, #000000 35%);
   /* fallback for older browsers */
