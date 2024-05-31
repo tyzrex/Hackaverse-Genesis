@@ -1,9 +1,11 @@
+import Footer from "./components/global/footer";
 import Navbar from "./components/global/navbar";
 import About from "./components/sections/about.section";
 import HeroSection from "./components/sections/hero-section";
 import { HighlightsSection } from "./components/sections/highlights-section";
 import MentorsSection from "./components/sections/mentors-section";
 import SpeakersSection from "./components/sections/speakers-section";
+import SponsorSection from "./components/sections/sponsor-section";
 import ThemeSection from "./components/sections/theme-section";
 import MaxWidthWrapper from "./components/wrapper/maxwidth-wrapper";
 
@@ -40,8 +42,11 @@ function App() {
         }))}
       />
       <SpeakersSection />
-
       <MentorsSection />
+      <MaxWidthWrapper>
+        <SponsorSection />
+        <Footer />
+      </MaxWidthWrapper>
     </>
   );
 }

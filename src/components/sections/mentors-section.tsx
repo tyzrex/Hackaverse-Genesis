@@ -4,11 +4,12 @@ import SectionInfo from "../typography/section-info";
 import PeopleCard from "../reusables/people-card";
 import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
 import ReusableCarousel from "../reusables/reusable-carousel";
+import SectionWrapper from "../wrapper/section-wrapper";
 
 export default function MentorsSection() {
   return (
     <>
-      <section className="py-10 md:py-20 flex flex-col items-center justify-center container">
+      <SectionWrapper className="container">
         <SectionHeader headingText="OUR MENTORS" />
         <SectionInfo
           className="mt-4 mb-10"
@@ -31,7 +32,7 @@ export default function MentorsSection() {
             </CarouselItem>
           )}
         />
-      </section>
+      </SectionWrapper>
     </>
   );
 }

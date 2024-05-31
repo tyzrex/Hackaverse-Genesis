@@ -2,10 +2,11 @@ import { themeData } from "@/constants/theme";
 import ThemeCard from "../elements/theme-card";
 import SectionHeader from "../typography/section-header";
 import SectionInfo from "../typography/section-info";
+import SectionWrapper from "../wrapper/section-wrapper";
 
 export default function ThemeSection() {
   return (
-    <section className="py-10 md:py-20 relative w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md my-20">
+    <SectionWrapper>
       <SectionHeader headingText="THEME" />
       <SectionInfo
         subheader="The themes of our Hackathon revolves around Sustainable Development
@@ -22,6 +23,6 @@ export default function ThemeSection() {
           />
         ))}
       </div>
-    </section>
+    </SectionWrapper>
   );
 }

@@ -2,10 +2,11 @@ import React from "react";
 import { SparklesCore } from "../ui/sparkles";
 import MaxWidthWrapper from "../wrapper/maxwidth-wrapper";
 import SectionHeader from "../typography/section-header";
+import SectionWrapper from "../wrapper/section-wrapper";
 
 export default function About() {
   return (
-    <section className="py-20 md:py-32 relative w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md my-20">
+    <SectionWrapper className="relative w-full bg-black flex flex-col items-center justify-center overflow-hidden">
       <div className="w-full absolute inset-0 h-screen">
         <SparklesCore
           id="tsparticlesfullpage"
@@ -39,6 +40,6 @@ export default function About() {
           </p>
         </div>
       </MaxWidthWrapper>
-    </section>
+    </SectionWrapper>
   );
 }
