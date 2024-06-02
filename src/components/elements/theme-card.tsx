@@ -22,7 +22,9 @@ export default function ThemeCard({ id, name, goal, image }: ThemeCardProps) {
         className="bg-black border border-gray-600 text-white w-full rounded-none"
       >
         <CardHeader>
-          <CardTitle>SDG {goal}</CardTitle>
+          <CardTitle className="font-[Orbitron] text-[#1FCFF1]">
+            SDG {goal}
+          </CardTitle>
           <CardDescription>{name}</CardDescription>
         </CardHeader>
         <CardContent>
