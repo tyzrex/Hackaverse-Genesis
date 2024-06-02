@@ -36,7 +36,7 @@ export default function Navbar() {
               </div>
               <div className="lg:flex flex-col space-y-8 lg:flex-row lg:space-x-3 lg:space-y-0 mt-8 lg:mt-0 hidden">
                 <a href="#">
-                  <CTAButton />
+                  <CTAButton className="hover:bg-fuchsia-600 hover:text-white transition-colors duration-500" />
                 </a>
               </div>
               {/* BURGER MENU */}

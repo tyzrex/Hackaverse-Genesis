@@ -141,7 +141,7 @@ export default function SponsorSection() {
                           src={`${sponsor.logo}`}
                           alt={sponsor.name}
                           className="aspect-[3/2] 
-                            w-full object-cover sm:min-w-32 max-w-48 md:max-w-64 
+                            w-full object-cover sm:min-w-32 sm:max-w-48 md:max-w-64 
                           "
                         />
                       </a>
