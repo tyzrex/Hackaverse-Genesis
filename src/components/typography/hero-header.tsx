@@ -6,7 +6,7 @@ import CTAButton from "../reusables/cta-button";
 export default function HeroHeader() {
   return (
     <>
-      <div className="flex flex-col items-center py-8 md:py-16 lg:py-32">
+      <div className="flex flex-col items-center ">
         <img
           src={HeroLogo}
           alt="Hero Header"
@@ -18,13 +18,8 @@ export default function HeroHeader() {
         >
           "IGNITE IDEAS, IGNITE CHANGE"
         </h2>
-        <h2
-          className="italic text-[16px] mt-5 hidden md:block
-          w sm:text-lg md:text-3xl md:not-italic lg:text-5xl font-semibold text-bottom"
-        >
-          "IGNITE IDEAS, IGNITE CHANGE"
-        </h2>
-        <CTAButton className="py-8 px-6 hover:bg-white hover:text-black transition-colors duration-300 bg-[rgba(94,94,94,0.6)] text-[#8B8787] font-[Orbitron] mt-5 w-fit text-2xl" />
+
+        <CTAButton className="md:py-8 md:px-6 py-4 px-3 hover:bg-white hover:text-black transition-colors duration-300 bg-[rgba(94,94,94,0.6)] text-[#8B8787] font-[Orbitron] mt-5 w-fit text-lg md:text-2xl" />
         <GlobeSection />
       </div>
     </>
