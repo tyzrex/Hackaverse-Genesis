@@ -1,25 +1,11 @@
+import { Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import Footer from "./components/global/footer";
 import Navbar from "./components/global/navbar";
-import About from "./components/sections/about.section";
 import HeroSection from "./components/sections/hero-section";
-import { HighlightsSection } from "./components/sections/highlights-section";
-import ThemeSection from "./components/sections/theme-section";
 import MaxWidthWrapper from "./components/wrapper/maxwidth-wrapper";
-import { highlightsData } from "./lib/constants";
-
-function generateRandomColor() {
-  const choices = [
-    "bg-red-400",
-    "bg-green-400",
-    "bg-blue-400",
-    "bg-yellow-400",
-    "bg-indigo-400",
-    "bg-purple-400",
-    "bg-pink-400",
-  ];
-  return choices[Math.floor(Math.random() * choices.length)];
-}
+import Home from "./components/pages/home";
+import ComingSoon from "./components/pages/coming-soon";
 
 function App() {
   useEffect(() => {
@@ -37,20 +23,11 @@ function App() {
       <MaxWidthWrapper>
         <Navbar />
       </MaxWidthWrapper>
-      <HeroSection />
-      <About />
-      <MaxWidthWrapper>
-        <ThemeSection />
-      </MaxWidthWrapper>
-      <HighlightsSection
-        products={highlightsData.map((highlight) => ({
-          title: highlight.title,
-          background: highlight.color,
-          description: highlight.description,
-        }))}
-      />
-      {/* <SpeakersSection /> */}
-      {/* <MentorsSection /> */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<ComingSoon />} />
+      </Routes>
+
       <MaxWidthWrapper>
         {/* <SponsorSection /> */}
         <Footer />
