@@ -2,6 +2,8 @@ import HeroLogo from "@/assets/header.png";
 import Globe from "../elements/globe";
 import GlobeSection from "../sections/globe-section";
 import CTAButton from "../reusables/cta-button";
+import CTADiscordButton from "../reusables/cta-discord";
+import { useEffect } from "react";
 
 export default function HeroHeader() {
   return (
@@ -19,7 +21,16 @@ export default function HeroHeader() {
           "IGNITE IDEAS, IGNITE CHANGE"
         </h2>
 
-        <CTAButton className="md:py-8 md:px-6 py-4 px-3 hover:bg-white hover:text-black transition-colors duration-300 bg-[rgba(94,94,94,0.6)] text-[#8B8787] font-[Orbitron] mt-5 w-fit text-lg md:text-2xl" />
+        <div
+          className="apply-button"
+          data-hackathon-slug="hackaversev1"
+          data-button-theme="dark"
+          style={{
+            height: "44px",
+            width: "300px",
+          }}
+        ></div>
+        <CTADiscordButton className="bg-[#5865F2] md:py-8 md:px-6 py-4 px-3 hover:bg-white hover:text-black transition-colors duration-300 text-white font-[Orbitron] mt-5 w-[300px] text-lg md:text-2xl" />
         <GlobeSection />
       </div>
     </>

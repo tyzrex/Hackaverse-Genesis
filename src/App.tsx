@@ -1,13 +1,12 @@
+import { useEffect } from "react";
 import Footer from "./components/global/footer";
 import Navbar from "./components/global/navbar";
 import About from "./components/sections/about.section";
 import HeroSection from "./components/sections/hero-section";
 import { HighlightsSection } from "./components/sections/highlights-section";
-import MentorsSection from "./components/sections/mentors-section";
-import SpeakersSection from "./components/sections/speakers-section";
-import SponsorSection from "./components/sections/sponsor-section";
 import ThemeSection from "./components/sections/theme-section";
 import MaxWidthWrapper from "./components/wrapper/maxwidth-wrapper";
+import { highlightsData } from "./lib/constants";
 
 function generateRandomColor() {
   const choices = [
@@ -23,6 +22,16 @@ function generateRandomColor() {
 }
 
 function App() {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://apply.devfolio.co/v2/sdk.js";
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
   return (
     <>
       <MaxWidthWrapper>
@@ -34,17 +43,16 @@ function App() {
         <ThemeSection />
       </MaxWidthWrapper>
       <HighlightsSection
-        products={Array.from({ length: 4 }, (_, i) => ({
-          title: "test",
-          background: generateRandomColor(),
-          description:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        products={highlightsData.map((highlight) => ({
+          title: highlight.title,
+          background: highlight.color,
+          description: highlight.description,
         }))}
       />
-      <SpeakersSection />
-      <MentorsSection />
+      {/* <SpeakersSection /> */}
+      {/* <MentorsSection /> */}
       <MaxWidthWrapper>
-        <SponsorSection />
+        {/* <SponsorSection /> */}
         <Footer />
       </MaxWidthWrapper>
     </>

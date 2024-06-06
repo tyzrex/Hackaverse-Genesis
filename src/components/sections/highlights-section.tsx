@@ -123,7 +123,7 @@ const ProductCard = ({
     >
       <Card
         className={cn(
-          "px-[24px] pt-[24px] pb-[127px] w-[530px] rounded-none border-none h-[500px] text-white",
+          "px-[24px] pt-[24px] pb-[127px] w-[530px] rounded-none border-none h-[450px] text-white",
           product.background
         )}
       >
